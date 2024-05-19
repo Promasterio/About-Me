@@ -7,5 +7,5 @@ function scrollToDetails() {
 }
 
 window.onload = function() {
-    document.getElementById("theme.mp3").play();
+    document.getElementById("theme").play();
 }
