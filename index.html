@@ -1,95 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Knaagdier AKA Promasterio (/knaagdier)</title>
-    <meta property="og:title" content="Knaagdier AKA Promasterio (/knaagdier)">
-    <meta name="description" content="Netherlands 🇳🇱 · Hi, I like making music, art and coding 
-    (Skript &amp; Java), still learning c#.
-    I mostly code minecraft server. I also play games like Minecraft, Valorant, chess and any zelda/mario game.">
-    <meta property="og:description" content="Netherlands 🇳🇱 · Hi, I like making music, art and coding 
-    (Skript &amp; Java), still learning c#.
-    I mostly code minecraft server. I also play games like Minecraft, Valorant, chess and any zelda/mario game.">
-    <meta property="og:image" content="https://cdn.solo.to/user/a/6484653b418af8_13498863.jpg">
-    <meta name="twitter:card" content="summary">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#BF8539">
-    <link href="https://cdn.solo.to/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://cdn.solo.to/user/a/sm/6484653b418af8_13498863.jpg" rel="apple-touch-icon">
-    <link href="https://solo.to/knaagdier" rel="canonical">
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="scripts.js" data-site="IHGLANPG" defer=""></script>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="body-dark">
-    <div class="page-wrapper page-wrapper-linkpage" style="font-family:'Chillax',sans-serif">
-        <div class="profile-bkg-hero-wrapper" style="background-image:none;background-color:#BF8539">
-            <div class="slice-div slice-div-large slice-div-large-dark"></div>
-        </div>
-        <div class="section info-card">
-            <div class="section-container">
-                <div class="profile-info-wrapper profile-info-wrapper-dark">
-                    <div class="profile-info-top-wrapper">
-                        <div class="profile-image-wrapper">
-                            <picture>
-                                <source media="(max-width:479px)" srcset="https://cdn.solo.to/user/a/sm/6484653b418af8_13498863.jpg">
-                                <img src="https://cdn.solo.to/user/a/6484653b418af8_13498863.jpg" decoding="async" class="profile-image">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="profile-info-bottom-wrapper">
-                        <div class="profile-name-wrapper">
-                            <h1 class="profile-name">Knaagdier AKA Promasterio</h1>
-                        </div>
-                        <div class="profile-location-box">
-                            <img src="https://cdn.solo.to/images/map-pin.svg" alt="Location" class="location-icon">
-                            <div class="profile-location-text">Netherlands 🇳🇱</div>
-                        </div>
-                        <p class="profile-bio profile-bio-dark">Hi, I like making music, art and coding 
-                        (Skript &amp; Java), still learning c#.
-                        I mostly code minecraft server. I also play games like Minecraft, Valorant, chess and any zelda/mario game.</p>
-                    </div>
-                    <div class="contact-button-wrapper">
-                        <div id="discord" data-username="promasterio" class="contact-button contact-button-dark w-inline-block">
-                            <img src="https://cdn.solo.to/images/contact/discord-min.svg" class="contact-button-image contact-button-image-dark">
-                            <div class="contact-button-text">Discord</div>
-                            <div class="contact-button-copy-overlay noselect">copied</div>
-                        </div>
-                    </div>
+<body>
+    <div class="background-container">
+        <canvas id="backgroundCanvas"></canvas>
+    </div>
+    <div class="content">
+        <div class="container">
+            <header>
+                <h1>About Me</h1>
+            </header>
+            <section class="profile">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+                <div class="bio">
+                    <h2>John Doe</h2>
+                    <p>Hello! I'm John Doe, a passionate web developer with a love for creating beautiful and functional websites. I specialize in front-end development and have a knack for designing user-friendly interfaces. When I'm not coding, you can find me exploring new technologies, hiking, or playing guitar.</p>
+                    <button class="btn" onclick="showAlert()">Contact Me</button>
+                    <button class="btn" onclick="scrollToDetails()">View Details</button>
                 </div>
-            </div>
-        </div>
-        <div class="section link-section">
-            <div class="section-container">
-                <div class="profile-link-wrapper">
-                    <div class="divider-wrapper divider-wrapper-top">
-                        <div style="background-color:#BF8539" class="divider-line divider-line-dark"></div>
-                    </div>
-                    <div class="link-item-wrapper link-item-wrapper-full-width">
-                        <a href="https://discord.gg/hM4xmcQjSc" id="NjM0MTk3OA" class="link-button link-button-full-width link-button-dark w-inline-block">
-                            <div class="link-icon-float" style="box-shadow:0 8px 14px -4px rgba(88,101,242,0.65)">
-                                <img src="https://cdn.solo.to/images/link/discord.svg" class="link-icon-float-image">
-                            </div>
-                            <div class="link-block-text-wrapper">
-                                <div class="link-name">My discord server</div>
-                                <div class="link-url">discord.gg/hM4xmcQjSc</div>
-                            </div>
-                            <div class="link-arrow-wrapper">
-                                <img src="https://cdn.solo.to/images/link-button-arrow.svg" class="link-arrows">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </section>
+            <section class="details" id="details">
+                <h2>Details</h2>
+                <ul>
+                    <li><strong>Location:</strong> San Francisco, CA</li>
+                    <li><strong>Email:</strong> john.doe@example.com</li>
+                    <li><strong>Phone:</strong> (123) 456-7890</li>
+                </ul>
+            </section>
         </div>
     </div>
-    <div class="page-footer">
-        <a href="https://solo.to/page" class="linkpage-cta linkpage-cta-dark w-inline-block">
-            <img src="https://cdn.solo.to/images/logo/solo-icon.svg" width="170" class="footer-brand-image">solo.to
-        </a>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>window.jQuery||document.write('<script src="/js/jquery-3.7.1.js"><\/script>')</script>
-    <script>const i18n = { }</script>
-    <script src="/js/page.js?i=01a3ab85"></script>
-    <script src="/js/prefetch.js?i=dc93443b" type="module"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
