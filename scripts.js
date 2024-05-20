@@ -2,16 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('background');
     const ctx = canvas.getContext('2d');
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const dots = [];
-    const maxDots = 100;
-    const dotSpeed = 0.5;
+    const maxDots = 250;
+    const dotSpeed = 0.8;
     const lineDistance = 100;
 
     class Dot {
@@ -71,9 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('resize', () => {
-        resizeCanvas();
-        dots.length = 0; // Clear the existing dots
-        init(); // Reinitialize the dots
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     });
 
     init();
