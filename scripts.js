@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const textElement = document.getElementById('dynamic-text');
+    const text = [
+        "I", "I can", "I can c", "I can co", "I can cod", "I can code",
+        "I can code!", "I can code", "I can cod", "I can co", "I can c", "I can", 
+        "I ca", "I c", "I", "I l", "I li", "I lik", "I like", "I like l", 
+        "I like la", "I like las", "I like lasa", "I like lasag", "I like lasagn", 
+        "I like lasagne", "I like lasagne."
+    ];
+    
+    let currentIndex = 0;
+    let currentText = '';
+    let interval;
+    
+    function animateText() {
+        textElement.textContent = currentText;
+        currentText = text[currentIndex];
+        currentIndex++;
+        if (currentIndex === text.length) {
+            currentIndex = 0; // Reset animation to repeat
+        }
+    }
+
+    function startAnimation() {
+        interval = setInterval(animateText, 300); // Change text every 300ms
+    }
+
+    function stopAnimation() {
+        clearInterval(interval);
+    }
+
+    startAnimation();  // Start on page load
+
     const canvas = document.getElementById('background');
     const ctx = canvas.getContext('2d');
 
