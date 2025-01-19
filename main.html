@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promasterio.exe</title>
+  <link rel="icon" type="image/x-icon" href="assets/Promasterio.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Desktop Interface (Main Menu) -->
+  <div id="desktop" class="desktop">
+    <div class="desktop-header">
+      <h1>Welcome to 8-Bit Terminal</h1>
+      <p>Click the button to enter</p>
+    </div>
+    <button id="startButton" class="start-button">Start</button>
+  </div>
+  <!-- Terminal Interface (Initially Hidden) -->
+  <div id="terminalContainer" class="terminal-container">
+    <!-- Terminal Header -->
+    <div class="terminal-header">
+      <img src="assets/Promasterio.png" alt="Terminal Icon" class="terminal-icon">
+      <span>Promasterio - 8Bit Terminal.exe</span>
+      <div class="control-buttons">
+        <span id="minimize" class="control minimize" title="Minimize">-</span>
+        <span id="maximize" class="control maximize" title="Maximize">+</span>
+        <span id="close" class="control close" title="Close">x</span>
+      </div>
+    </div>
+
+    <!-- Terminal Output -->
+    <div class="output"></div>
+    <span class="blinking-cursor"></span>
+    <!-- Terminal Footer -->
+    <div class="terminal-footer">
+      
+      <nav class="terminal-nav">
+        <a id="about-me" class="terminal-nav-button">About Me</a>
+        <a id="portfolio" class="terminal-nav-button">Portfolio</a>
+        <a id="contact" class="terminal-nav-button">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="themeAudio" src="assets/Theme.mp3" preload="auto"></audio>
+  <!-- Add audio element for the click sound -->
+  <audio id="clickSound" src="assets/click.mp3" preload="auto"></audio>
+  <button id="muteButton" class="mute-button">Mute</button>
+  <script src="script.js"></script>
+</body>
+</html>
