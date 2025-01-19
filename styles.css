@@ -16,7 +16,6 @@ a {
   font-weight: bold;
 }
 
-/* Desktop Interface */
 .desktop {
   display: flex;
   flex-direction: column;
@@ -43,7 +42,6 @@ a {
   background-color: #00cc00;
 }
 
-/* Terminal Interface */
 .terminal-container {
   display: none;
   position: fixed;
@@ -111,7 +109,6 @@ a {
   background-color: #00ff00;
 }
 
-/* Custom Scrollbar */
 .output::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -138,19 +135,16 @@ a {
   border: 2px solid #004400;
 }
 
-/* Disable text selection */
 * {
   user-select: none;
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none; /* For Firefox */
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
-/* Audio */
 audio {
   display: none;
 }
 
-/* Style for the mute button */
 .mute-button {
   position: absolute;
   top: 10px;
@@ -166,9 +160,8 @@ audio {
 
 .mute-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-} 
+}
 
-/* Terminal Container (Initially Hidden) */
 .terminal-container {
   display: none;
   position: fixed;
@@ -187,7 +180,6 @@ audio {
   transition: all 0.3s ease-in-out;
 }
 
-/* Terminal Header */
 .terminal-header {
   display: flex;
   justify-content: space-between;
@@ -199,10 +191,9 @@ audio {
   font-size: 1rem;
 }
 
-/* Output Styles */
 .output {
   font-family: 'Courier New', monospace;
-  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-y: auto;
   flex-grow: 1;
   padding: 10px;
   font-size: 1.2rem;
@@ -211,24 +202,22 @@ audio {
   line-height: 1.6;
   max-height: 61vh;
   animation: flicker 1.5s infinite;
-  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  scroll-behavior: smooth;
   position: relative;
   z-index: 1;
 }
 
-
-/* Ensure clickable links are styled correctly */
 a.url-link {
-  color: #1e90ff; /* Color for the link */
-  text-decoration: underline; /* Underline links */
-  cursor: pointer; /* Change cursor to indicate it's clickable */
+  color: #1e90ff;
+  text-decoration: underline;
+  cursor: pointer;
   z-index: 10;
   position: relative;
 }
 
 a.url-link:hover {
-  color: #00bfff; /* Optional: change color on hover */
-  text-decoration: none; /* Optional: remove underline on hover */
+  color: #00bfff;
+  text-decoration: none;
   z-index: 10;
   position: relative;
 }
@@ -240,10 +229,9 @@ a.url-link:hover {
   height: 18px;
   background: #00ff00;
   animation: blink 1s steps(1, start) infinite;
-  transform: translateX(0) translateY(-175%); /* Adjusted for visibility */
+  transform: translateX(0) translateY(-175%);
 }
 
-/* Terminal Footer */
 .terminal-footer {
   background: #002200;
   padding: 5px;
@@ -279,7 +267,6 @@ a.url-link:hover {
   box-shadow: 0 0 4px #006600;
 }
 
-/* Window Control Buttons */
 .control {
   display: inline-block;
   width: 16px;
@@ -316,34 +303,29 @@ a.url-link:hover {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Retro 8-bit terminal look for media elements */
 .media-container {
-  border: 3px solid #00FF00; /* Classic green border for terminal look */
-  background-color: #000000; /* Black background */
-  box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.6); /* Glowing effect */
+  border: 3px solid #00FF00;
+  background-color: #000000;
+  box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.6);
   padding: 5px;
-  font-family: 'Courier New', monospace; /* Monospace font for terminal feel */
-  color: #00FF00; /* Green text color for a retro feel */
-  display: inline-block; /* Wrap tightly around content */
-  margin: 10px auto; /* Center horizontally */
-  max-width: 90%; /* Prevent it from overflowing the container */
-  text-align: center; /* Center the content inside */
+  font-family: 'Courier New', monospace;
+  color: #00FF00;
+  display: inline-block;
+  margin: 10px auto;
+  max-width: 90%;
+  text-align: center;
 }
 
-/* Styles for media elements (images, videos, audio) */
 .media-container img,
 .media-container video,
 .media-container audio {
-  display: block; /* Ensure proper layout */
-  margin: 0 auto; /* Center the media within the container */
-  max-width: 90%; /* Limit the width to 90% of the container */
-  max-height: 50vh; /* Limit the height to 50% of the viewport height */
-  object-fit: contain; /* Scale proportionally without cropping */
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 50vh;
+  object-fit: contain;
 }
 
-
-
-/* Keyframes for Flicker Effect */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
